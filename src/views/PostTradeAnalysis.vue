@@ -453,7 +453,7 @@ export default {
       //console.log(item);
       this.selected_stock_id = item.item.stock_id;
       const requestOne = axios.get(
-        `https://localhost:3000/api/stock_prices_isin/${item.item.isin}`
+        `http://100.71.5.144:3000/api/stock_prices_isin/${item.item.isin}`
       );
       //var selectedItem = item.item;
       axios.all([requestOne]).then(

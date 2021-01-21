@@ -185,7 +185,7 @@ stockInit(Highcharts);
 export default {
   components: { TradingVue },
   beforeCreate() {
-    axios.get("http://localhost:3000/api/screener_episodic_pivots/").then((res) => {
+    axios.get("http://100.71.5.144:3000/api/screener_episodic_pivots/").then((res) => {
       var array = [];
       for (var i = 0; i < res.data.length; i++) {
         var entry = res.data[i];
@@ -516,14 +516,14 @@ export default {
       this.selected_stock_id = item.item.stock_id;
       const requestOne = this.weekly
         ? axios.get(
-            `http://localhost:3000/api/stock_prices/${item.item.stock_id}`
+            `http://100.71.5.144:3000/api/stock_prices/${item.item.stock_id}`
           )
         : axios.get(
-            `http://localhost:3000/api/stock_prices/${item.item.stock_id}`
+            `http://100.71.5.144:3000/api/stock_prices/${item.item.stock_id}`
           );
 
       const requestTwo = axios.get(
-        `http://localhost:3000/api/reports_r12/${item.item.stock_id}`
+        `http://100.71.5.144:3000/api/reports_r12/${item.item.stock_id}`
       );
       axios.all([requestOne, requestTwo]).then(
         axios.spread((...responses) => {
@@ -631,7 +631,7 @@ export default {
     getTradingViewDataWeekly() {
       axios
         .get(
-          `http://localhost:3000/api/stock_prices_weekly/${this.selected_stock_id}`
+          `http://100.71.5.144:3000/api/stock_prices_weekly/${this.selected_stock_id}`
         )
         .then((res) => {
           this.$refs.tradingVue.resetChart();
@@ -697,7 +697,7 @@ export default {
     },
     getTradingViewDataDaily() {
       axios
-        .get(`http://localhost:3000/api/stock_prices/${this.selected_stock_id}`)
+        .get(`http://100.71.5.144:3000/api/stock_prices/${this.selected_stock_id}`)
         .then((res) => {
           this.$refs.tradingVue.resetChart();
           var ohlc_data = [];
