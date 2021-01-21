@@ -1,0 +1,59 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --disable-host-check",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.21.2",
+    "chart.js": "^2.9.4",
+    "core-js": "^3.8.2",
+    "echarts": "^4.9.0",
+    "highcharts": "^7.2.2",
+    "highcharts-vue": "^1.3.5",
+    "lightweight-charts": "^3.2.0",
+    "trading-vue-js": "^0.5.2",
+    "vue": "^2.6.12",
+    "vue-chartjs": "^3.5.1",
+    "vue-echarts": "^4.1.0",
+    "vue-google-charts": "^0.3.3",
+    "vue-router": "^3.4.9",
+    "vuetify": "^2.4.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.5.10",
+    "@vue/cli-plugin-eslint": "^4.5.10",
+    "@vue/cli-service": "^4.5.10",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "sass": "^1.32.2",
+    "sass-loader": "^8.0.0",
+    "vue-cli-plugin-vuetify": "^2.0.9",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.3.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
